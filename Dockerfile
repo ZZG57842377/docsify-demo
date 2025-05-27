@@ -12,4 +12,4 @@ WORKDIR /docs
 EXPOSE 3000
 
 # 启动命令：运行 Docsify 服务，监听所有 IP（0.0.0.0）
-CMD ["docsify", "serve", "-p", "3000", "."]
+CMD ["docsify", "serve", "-p", "3000", "--host", "0.0.0.0", "."]
