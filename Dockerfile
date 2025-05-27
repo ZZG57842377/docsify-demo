@@ -1,5 +1,5 @@
 # 使用 Node.js 作为基础镜像（Docsify 基于 Node.js）
-FROM registry.cn-shenzhen.aliyuncs.com/library/node:18-alpine
+FROM node:18-alpine
 
 # 安装 Docsify CLI
 RUN npm install -g docsify-cli@latest
