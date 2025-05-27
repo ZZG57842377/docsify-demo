@@ -1,5 +1,5 @@
 # 使用 Node.js 作为基础镜像（Docsify 基于 Node.js）
-FROM node:18-alpine
+FROM registry.cn-shenzhen.aliyuncs.com/library/node:18-alpine
 
 # 安装 Docsify CLI
 RUN npm install -g docsify-cli@latest
@@ -12,4 +12,4 @@ WORKDIR /docs
 EXPOSE 3000
 
 # 启动命令：运行 Docsify 服务，监听所有 IP（0.0.0.0）
-CMD ["docsify", "serve", "-p", "3000", "--host", "0.0.0.0", "."]
+CMD ["docsify", "serve", "-p", "3000", "."]
